@@ -314,6 +314,7 @@ p {
 	opacity: 0.9;
 	z-index: -1;
 }
+
 #services .service-bottom .icon {
 	height: 80px;
 	width: 80px;
@@ -324,7 +325,28 @@ p {
 	color: white;
 	margin-bottom: 10px;
 	text-transform: uppercase;
+	display: inline-block;
+	position: relative;
 }
+#services .service-item h2:hover:after{
+	cursor: pointer;
+	transform-origin: bottom left;
+	transform: scaleX(1);
+}
+#services .service-item h2:after {
+	content	: '';
+	position: absolute;
+	background-color: rgb(56, 56, 144);
+	width: 50%;
+	height: 5px;
+	bottom: 0;
+	left: 0;
+	transform: scaleX(0);
+	transform-origin: bottom right;
+	transition: transform 0.3s ease-out;
+	margin-top: 5rem;
+}
+
 #services .service-item p {
 	color: white;
 	text-align: left;
@@ -629,7 +651,7 @@ p {
 		top: 34px;
 		height: 98%;
 		width: 98%;
-		border: 10px solid crimson;
+		border: 10px solid rgb(122, 32, 32);
 	}
 	#about .col-right {
 		text-align: left;
